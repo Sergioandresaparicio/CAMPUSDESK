@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f2af6fc-9140-43a6-8d5a-ba73add84703" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.14.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/roles/usermanagement/persistance/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/roles/usermanagement/persistance/mapper/UserMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/roles/usermanagement/persistance/mapper/UserRoleMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/com/roles/usermanagement/persistance/mapper/UserRoleMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +36,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="usermanagement" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -45,23 +64,23 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000000005276" />
-      <entry key="S10" value="1.0000014469922527" />
-      <entry key="S30" value="1.0284760658196743" />
-      <entry key="S60" value="1.3374599031158174" />
-      <entry key="M2" value="2.1617940045093134" />
-      <entry key="M5" value="3.4394213905574444" />
-      <entry key="M10" value="4.138078968092875" />
-      <entry key="M15" value="4.580521145332797" />
-      <entry key="M30" value="8.621390257037698" />
-      <entry key="H1" value="28.815840674745758" />
-      <entry key="H2" value="68.20080053508661" />
-      <entry key="H4" value="109.18411459838921" />
-      <entry key="D1" value="163.90278500300835" />
-      <entry key="W1" value="175.910086851714" />
+      <entry key="MS100" value="1.030395467106634" />
+      <entry key="MS500" value="1.4972350843366071" />
+      <entry key="S2" value="1.8397314929441402" />
+      <entry key="S5" value="1.9325157516099496" />
+      <entry key="S10" value="1.9656699489460912" />
+      <entry key="S30" value="2.0165690553886026" />
+      <entry key="S60" value="2.3296952545253653" />
+      <entry key="M2" value="3.1555097024742564" />
+      <entry key="M5" value="4.435418559230258" />
+      <entry key="M10" value="5.135670299250448" />
+      <entry key="M15" value="5.5787435041841285" />
+      <entry key="M30" value="9.619717169542604" />
+      <entry key="H1" value="29.81304450379833" />
+      <entry key="H2" value="69.19749149188296" />
+      <entry key="H4" value="110.18146580737753" />
+      <entry key="D1" value="164.90212228662048" />
+      <entry key="W1" value="176.90998524209274" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -83,23 +102,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8293195458144417" />
-      <entry key="MS500" value="0.963261894020148" />
-      <entry key="S2" value="0.9906861581012825" />
-      <entry key="S5" value="0.9962640014986637" />
-      <entry key="S10" value="0.9981316211834855" />
-      <entry key="S30" value="1.0273323405438073" />
-      <entry key="S60" value="1.3340603060506449" />
-      <entry key="M2" value="2.156317906148026" />
-      <entry key="M5" value="3.434888259562272" />
-      <entry key="M10" value="4.1351749740396055" />
-      <entry key="M15" value="4.578344898923768" />
-      <entry key="M30" value="8.619529666928287" />
-      <entry key="H1" value="28.813329233877177" />
-      <entry key="H2" value="68.19813097402077" />
-      <entry key="H4" value="109.18207260676645" />
-      <entry key="D1" value="163.90229088163446" />
-      <entry key="W1" value="175.91001149462616" />
+      <entry key="MS100" value="0.05560302208232535" />
+      <entry key="MS500" value="0.9762026934479554" />
+      <entry key="S2" value="1.6716418595256248" />
+      <entry key="S5" value="1.8615476257684298" />
+      <entry key="S10" value="1.9295328685967146" />
+      <entry key="S30" value="2.0038612378819622" />
+      <entry key="S60" value="2.3205098751007633" />
+      <entry key="M2" value="3.147142538375001" />
+      <entry key="M5" value="4.429726894424902" />
+      <entry key="M10" value="5.132185921376339" />
+      <entry key="M15" value="5.576180015252421" />
+      <entry key="M30" value="9.617662878125717" />
+      <entry key="H1" value="29.810436270732673" />
+      <entry key="H2" value="69.19477354121634" />
+      <entry key="H4" value="110.17939960543615" />
+      <entry key="D1" value="164.90162412389412" />
+      <entry key="W1" value="176.90990930742595" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -114,28 +133,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build spring-security-user-role-management.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.UsermanagementApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;DevSergio&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sergi/OneDrive/Desktop/springboot/PROYECTO/CAMPUSDESK/spring-security-user-role-management&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build spring-security-user-role-management.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.UsermanagementApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "DevSergio",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/camper/Descargas/sergio/CAMPUSDESK/spring-security-user-role-management",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
