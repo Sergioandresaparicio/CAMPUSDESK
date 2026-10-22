@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f2af6fc-9140-43a6-8d5a-ba73add84703" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/dto/SlaPolicyRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/dto/SlaPolicyRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/dto/SlaPolicyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/dto/SlaPolicyResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/entity/SlaPolicy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/entity/SlaPolicy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/entity/SlaViolation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/entity/SlaViolation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/repository/SlaPolicyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/repository/SlaPolicyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/repository/SlaViolationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/roles/usermanagement/modules/sla/repository/SlaViolationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

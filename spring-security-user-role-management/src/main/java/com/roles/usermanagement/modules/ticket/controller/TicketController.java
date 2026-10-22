@@ -214,7 +214,7 @@ public class TicketController {
                 .body(ticketWorklogService.registerWorklog(id, request, auth));
     }
 
-    // [Ejercicio 4 Examen: Endpoint para consultar tiempo total dedicado y desglose]
+    // EXAMEN TIEMPO CONSUMIDO POR EL TICKET
     @GetMapping("/{id}/tiempo-total")
     @Operation(summary = "Consultar tiempo total acumulado y desglose de horas trabajadas en un ticket")
     public ResponseEntity<TiempoTotalResponse> getTiempoTotal(@PathVariable Long id) {
