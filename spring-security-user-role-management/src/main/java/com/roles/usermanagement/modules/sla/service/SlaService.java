@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
-// [Nueva Funcionalidad: A-01/T-15/U-12 - Servicio de gestión de SLA] - Calcula vencimientos y registra infracciones de acuerdos de nivel de servicio - Conecta con: SlaPolicyRepository, SlaViolationRepository y Ticket
+// EXAMEN - Calcula vencimientos y registra infracciones de acuerdos de nivel de servicio - Conecta con: SlaPolicyRepository, SlaViolationRepository y Ticket
 @Service
 @RequiredArgsConstructor
 public class SlaService {
@@ -67,10 +67,10 @@ public class SlaService {
 
     private int defaultResolutionHours(SlaPriority priority) {
         return switch (priority) {
-            case LOW -> 72;
-            case MEDIUM -> 48;
-            case HIGH -> 24;
-            case CRITICAL -> 8;
+            case LOW -> 48;
+            case MEDIUM -> 24;
+            case HIGH -> 8;
+            case CRITICAL -> 4;
         };
     }
 
@@ -78,7 +78,7 @@ public class SlaService {
         return switch (priority) {
             case LOW -> 24;
             case MEDIUM -> 12;
-            case HIGH -> 4;
+            case HIGH -> 2;
             case CRITICAL -> 1;
         };
     }
