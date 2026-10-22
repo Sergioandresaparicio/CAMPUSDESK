@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 
-// [Nueva Funcionalidad: T-18/A-12/U-29 - Tarea periódica de detección de vencimiento SLA] - Escanea tickets próximos a vencer y emite alertas automáticas - Conecta con: TicketRepository y NotificationService
+// REGLA DE VENCIMIENTO EXAMEN - Escanea tickets próximos a vencer y emite alertas automáticas - Conecta con: TicketRepository y NotificationService
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -24,7 +24,7 @@ public class SlaBreachScheduler {
     // Ejecuta cada 5 minutos (300000 ms)
     @Scheduled(fixedRate = 300000)
     public void checkSlaBreaches() {
-        LocalDateTime threshold = LocalDateTime.now().plusHours(2);
+        LocalDateTime threshold = LocalDateTime.now().plusHours(1);
         List<Ticket> nearingBreach = ticketRepository.findTicketsNearingSlaBreach(threshold);
 
         for (Ticket ticket : nearingBreach) {
@@ -32,7 +32,7 @@ public class SlaBreachScheduler {
                 notificationService.createNotification(
                         ticket.getTechnician().getUsername(),
                         "Alerta de SLA: Ticket #" + ticket.getId(),
-                        "El ticket '" + ticket.getTitle() + "' está a menos de 2 horas de su fecha límite de resolución.",
+                        "El ticket '" + ticket.getTitle() + "' está a menos de 1 hora de su fecha límite de resolución.",
                         NotificationType.SLA_WARNING,
                         ticket.getId()
                 );
