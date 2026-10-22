@@ -221,9 +221,9 @@ public class TicketController {
         return ResponseEntity.ok(ticketWorklogService.getTiempoTotal(id));
     }
 
-    // [Nueva Funcionalidad: A-25 - Ver cola global de tickets sin asignar]
+    // EXAMEN TICKETS ABIERTOS SIN ASIGNAR
     @GetMapping("/unassigned")
-    @PreAuthorize("hasAnyRole('ADMIN', 'SUPERADMIN', 'TECHNICIAN')")
+    @PreAuthorize("hasAnyRole('ADMIN', 'SUPERADMIN', 'TECHNICIAN')") // estos son los roles relacionados a los tickets que pueden acceder al estado del ticket
     @Operation(summary = "Ver cola global de tickets OPEN sin asignar (A-25)")
     public ResponseEntity<com.roles.usermanagement.domain.dto.PageResponse<TicketResponse>> getUnassignedTickets(
             @RequestParam(defaultValue = "0") int page,
