@@ -1,4 +1,18 @@
-# CAMPUSDESK - Plataforma de Mesa de Ayuda y Gestión de Tickets
+# 🎫 CAMPUSDESK — Plataforma de Mesa de Ayuda y Gestión de Tickets
+
+<div align="center">
+
+[![Java 21](https://img.shields.io/badge/Java-21%20LTS-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Spring Security](https://img.shields.io/badge/Spring_Security-6.x-6DB33F?style=for-the-badge&logo=spring-security&logoColor=white)](https://spring.io/projects/spring-security)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%2B-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![JWT](https://img.shields.io/badge/JWT-Auth0-black?style=for-the-badge&logo=json-web-tokens)](https://jwt.io/)
+[![Swagger / OpenAPI](https://img.shields.io/badge/Swagger-OpenAPI%203-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](http://localhost:8051/swagger-ui.html)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+**Sistema web integral para la recepción, priorización, asignación, seguimiento y resolución de incidencias técnicas en entornos de Campuslands.**
+
+</div>
 
 Sistema web integral para la recepción, priorización, asignación, seguimiento y resolución de incidencias y solicitudes técnicas en entornos institucionales o corporativos de campus. Diseñado con una arquitectura desacoplada y sin estado (*stateless*), incorpora control de acceso granular basado en roles (RBAC) con permisos dinámicos, ciclo de vida estricto para contraseñas y auditoría histórica completa de eventos.
 
@@ -77,7 +91,7 @@ Antes de instalar y ejecutar el proyecto, asegúrate de contar con las siguiente
 Abre tu terminal y clona el proyecto en tu espacio de trabajo local:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/Sergioandresaparicio/CAMPUSDESK.git
 cd CAMPUSDESK
 ```
 
@@ -365,3 +379,106 @@ Resultados de ejecución esperados:
 - **Pruebas de Seguridad:** Validación de emisión y firma de tokens JWT HMAC256, expiración y rechazo de accesos no autorizados (HTTP 401/403).
 - **Pruebas de Ciclo de Vida:** Comprobación de transiciones de estado válidas e invalidación de saltos ilegales en tickets.
 - **Pruebas de Concurrencia y Transacciones:** Verificación de atomicidad en asignaciones y cambios de estado con rollback automático en caso de excepción.
+
+---
+
+## 🏛️ Arquitectura de Software y Principios SOLID
+
+El sistema implementa una arquitectura en capas desacoplada con estricta adherencia a los estándares de ingeniería de software:
+
+```mermaid
+flowchart TD
+    subgraph Frontend["Capa de Presentación (Frontend)"]
+        UI["Vistas HTML5 / CSS3"]
+        JS["Controladores Vanilla JS (Fetch API)"]
+    end
+
+    subgraph Security["Capa de Seguridad (Spring Security 6)"]
+        Filter["JwtAuthenticationFilter (HMAC256)"]
+        RBAC["Autorización RBAC / @PreAuthorize"]
+    end
+
+    subgraph Controllers["Capa de Exposición REST"]
+        AC["AuthController"]
+        TC["TicketController"]
+        UC["UserController"]
+        RC["RoleController"]
+    end
+
+    subgraph Services["Capa de Lógica de Negocio"]
+        TS["TicketService"]
+        US["UserService"]
+        AS["AssignmentService"]
+    end
+
+    subgraph Persistence["Capa de Persistencia (Spring Data JPA)"]
+        TR["TicketRepository"]
+        UR["UserRepository"]
+        Entities["Entidades JPA (Hibernate)"]
+    end
+
+    subgraph Database["Capa de Datos"]
+        PG[("PostgreSQL 14+")]
+    end
+
+    UI --> JS
+    JS -->|HTTP / JSON + Bearer Token| Filter
+    Filter --> RBAC
+    RBAC --> Controllers
+    Controllers --> Services
+    Services --> Persistence
+    Persistence --> Database
+```
+
+### Aplicación de Principios SOLID
+
+1. **Single Responsibility Principle (SRP):**
+   * Cada controlador (`AuthController`, `TicketController`) se limita a manejar el transporte HTTP y serialización.
+   * La lógica de negocio reside exclusivamente en los servicios (`TicketService`, `UserService`).
+   * La persistencia está aislada en repositorios JPA dedicados.
+2. **Open/Closed Principle (OCP):**
+   * El sistema de filtros de seguridad y la jerarquía de roles admiten nuevos tipos de permisos y filtros sin modificar el núcleo de autenticación.
+3. **Liskov Substitution Principle (LSP):**
+   * Los repositorios extienden `JpaRepository<T, ID>`, permitiendo sustitución transparente y pruebas unitarias con mocks o bases de datos en memoria (H2).
+4. **Interface Segregation Principle (ISP):**
+   * DTOs específicos para cada operación (`TicketCreateRequest`, `TicketResponseDTO`, `UserUpdateRequest`) evitando transferir campos innecesarios o acoplar la vista a la entidad JPA.
+5. **Dependency Inversion Principle (DIP):**
+   * Los controladores y servicios dependen de abstracciones (interfaces de repositorios y servicios), inyectadas mediante el contenedor IoC de Spring (`@Autowired` / inyección por constructor).
+
+### Ciclo de Vida del Ticket (Máquina de Estados)
+
+```mermaid
+stateDiagram-v2
+    [*] --> PENDIENTE : Usuario crea Ticket
+    PENDIENTE --> ASIGNADO : Admin asigna Técnico
+    ASIGNADO --> EN_PROCESO : Técnico inicia atención
+    EN_PROCESO --> EN_ESPERA : Requiere repuesto o info
+    EN_ESPERA --> EN_PROCESO : Reanuda atención
+    EN_PROCESO --> RESUELTO : Técnico finaliza solución
+    RESUELTO --> CERRADO : Usuario o Admin valida
+    RESUELTO --> REABIERTO : Solución insatisfactoria
+    REABIERTO --> EN_PROCESO : Nueva revisión
+    CERRADO --> [*]
+```
+
+---
+
+## 🤝 Metodología Ágil, Scrum y Flujo Colaborativo
+
+El proyecto fue desarrollado simulando un entorno profesional de desarrollo ágil con la metodología **Scrum**:
+
+* **Sprint Planning & Backlog:** Definición de historias de usuario con criterios de aceptación (Gherkin format: *Dado, Cuando, Entonces*).
+* **Roles en el Equipo:**
+  * **Sergio Aparicio:** Arquitectura backend, diseño de la base de datos PostgreSQL, integración de Spring Security y endpoints de tickets.
+  * **Jhon Reyes / Sebastian Ayala / Juan Diego León:** Desarrollo de módulos de frontend, integración de consumo de API y suite de pruebas.
+* **Flujo de Ramas (Gitflow):**
+  * `main`: Código estable y listo para producción.
+  * `develop`: Integración continua de funcionalidades.
+  * `feature/*`: Desarrollo de módulos específicos (ej. `feature/ticket-lifecycle`, `feature/auth-jwt`).
+* **Conventional Commits:** Adopción obligatoria de prefijos semánticos (`feat:`, `fix:`, `docs:`, `refactor:`, `test:`) para garantizar un changelog automatizable.
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para mayores detalles.
